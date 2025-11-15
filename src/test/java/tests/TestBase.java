@@ -25,7 +25,7 @@ public class TestBase {
         Configuration.browser = config.browser();
         Configuration.browserVersion = config.browserVersion();
         Configuration.browserSize = config.browserSize();
-        Configuration.timeout = 50000;
+        Configuration.timeout = config.timeout();
         Configuration.pageLoadTimeout = 60000;
         Configuration.pageLoadStrategy = config.pageLoadStrategy();
         Configuration.remote = config.remote();

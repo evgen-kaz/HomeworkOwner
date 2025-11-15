@@ -32,4 +32,7 @@ public interface WebDriverConfig extends Config {
 
     @Key("pageLoadStrategy")
     String pageLoadStrategy();
+
+    @Key("timeout")
+    long timeout();
 }
