@@ -40,13 +40,13 @@ public class HeaderPage {
 
     @Step("Клик кнопки 'Оставить заявку'")
     public HeaderPage clickLeaveRequestHeader() {
-        leaveRequestButton.click();
+        leaveRequestButton.shouldBe(visible).click(); //добавила shouldBe(visible)
         return this;
     }
 
     @Step("Клик кнопки поиска")
     public HeaderPage clickStringSearchHeader() {
-        searchButton.click();
+        searchButton.shouldBe(visible).click(); //добавила shouldBe(visible)
         return this;
     }
 

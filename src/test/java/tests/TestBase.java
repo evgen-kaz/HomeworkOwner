@@ -16,8 +16,7 @@ import java.util.Map;
 
 public class TestBase {
 
-    private static final WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties()
-    );
+    private static final WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
@@ -25,12 +24,15 @@ public class TestBase {
         Configuration.browser = config.browser();
         Configuration.browserVersion = config.browserVersion();
         Configuration.browserSize = config.browserSize();
-        Configuration.timeout = config.timeout();
-        Configuration.pageLoadTimeout = 60000;
-        Configuration.pageLoadStrategy = config.pageLoadStrategy();
-        Configuration.remote = config.remote();
+        Configuration.remote = config.remoteUrl();
+        Configuration.pageLoadStrategy = "normal";
+        Configuration.timeout = 10000;
+        setupSelenoidCapabilities();
+    }
+
+    private static void setupSelenoidCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+        capabilities.setCapability("selenoid:options", Map.of(
                 "enableVNC", true,
                 "enableVideo", true
         ));

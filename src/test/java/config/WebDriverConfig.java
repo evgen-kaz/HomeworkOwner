@@ -15,7 +15,7 @@ public interface WebDriverConfig extends Config {
     String browser();
 
     @Key("browserVersion")
-        //@DefaultValue("128.0")
+        //@DefaultValue("")
     String browserVersion();
 
     @Key("browserSize")
@@ -23,16 +23,10 @@ public interface WebDriverConfig extends Config {
     String browserSize();
 
     @Key("baseUrl")
-        // @DefaultValue("https://korsarcase.ru")
+        //@DefaultValue("https://korsarcase.ru")
     String baseUrl();
 
-    @Key("remote")
-        // @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
-    String remote();
-
-    @Key("pageLoadStrategy")
-    String pageLoadStrategy();
-
-    @Key("timeout")
-    long timeout();
+    @Key("remoteUrl")
+        //@DefaultValue("")
+    String remoteUrl();
 }
