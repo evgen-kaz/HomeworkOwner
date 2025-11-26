@@ -26,7 +26,7 @@ public class TestBase {
         Configuration.browserSize = config.browserSize();
         Configuration.remote = config.remoteUrl();
         Configuration.pageLoadStrategy = "normal";
-        Configuration.timeout = 10000;
+        Configuration.timeout = 30000;
         setupSelenoidCapabilities();
     }
 

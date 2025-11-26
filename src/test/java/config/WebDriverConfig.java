@@ -11,22 +11,22 @@ import org.aeonbits.owner.Config;
 public interface WebDriverConfig extends Config {
 
     @Key("browser")
-        //@DefaultValue("chrome")
+    @DefaultValue("chrome")
     String browser();
 
     @Key("browserVersion")
-        //@DefaultValue("")
+    @DefaultValue("")
     String browserVersion();
 
     @Key("browserSize")
-        //@DefaultValue("1920x1080")
+    @DefaultValue("1920x1080")
     String browserSize();
 
     @Key("baseUrl")
-        //@DefaultValue("https://korsarcase.ru")
+    @DefaultValue("https://korsarcase.ru")
     String baseUrl();
 
     @Key("remoteUrl")
-        //@DefaultValue("")
+    @DefaultValue("")
     String remoteUrl();
 }
