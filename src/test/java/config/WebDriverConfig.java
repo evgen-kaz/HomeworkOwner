@@ -15,7 +15,7 @@ public interface WebDriverConfig extends Config {
     String browser();
 
     @Key("browserVersion")
-    @DefaultValue("")
+    //@DefaultValue("")
     String browserVersion();
 
     @Key("browserSize")
@@ -27,6 +27,6 @@ public interface WebDriverConfig extends Config {
     String baseUrl();
 
     @Key("remoteUrl")
-    @DefaultValue("")
+    //@DefaultValue("")
     String remoteUrl();
 }
